@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Loan Calculator</title>
+
+	<style>
+		body{
+            margin:  3% 20%;
+        }
+
+        body{
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        table{
+            border-collapse:separate;
+            border: 2px solid black;
+            padding: 15px;
+            width: 100%;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        .loanCalculator{
+            background-color: rgb(223, 175, 86);
+            padding: 20px;
+            margin: 20px 10%;
+        }
+        .input{
+            text-align: justify;
+            margin: auto 25%;
+
+        }
+
+       #heading{
+           color: red;
+           font-style:italic;
+           font-weight: bold;
+           font-size:30px;
+           padding: 20px !important ;
+       } 
+        input{
+         
+            margin-right:30%  ;
+            display: inline-block;
+            float: right;
+            border-radius:3px;
+        }
+
+       
+
+        .btn-estimate{
+            background-color:rgb(223, 223, 11);
+            padding :5px 15px;
+            border-radius: 5px;
+            border-color: black;
+        }
+		
+	</style>
+</head>
+
+<body>
+
+    <h id="heading"><I> Fixed And Reducing Loan Estimator </I></h>
+  
+	<div class="loanCalculator">
+
+		<p> <b>Principal Loan Amount (Rs.)</b><input id="principalAmount" type="number">
+		</p>
+
+		<p> <b>Intrest Rate(%) </b>
+			<input id="interestRate" type="number">
+		</p>
+
+		<p> <b>Tenure(Months) </b>
+			<input id="tenure" type="number">
+		</p>
+        <center><button class="btn-estimate">Estimate</button></center>
+       
+      <br> <br>
+        <center><b> Loan Estimation </b></center>
+        <br>
+
+        <table>
+            <tr>
+                <th>Details</th>
+                <th>Reducing Interest Loan</th>
+                <th>Fixed Intrest Loan</th>
+            </tr>
+            <tc>
+                <td>Total Interest Rs.</td>
+                <td id ="tInterest"></td>
+                <td id ="tInterestFixed"></td>
+            </tc>
+            <tr>
+                <td>Total Payment Rs.</td>
+                <td id ="tPayment"></td>
+                <td id ="tPaymentFixed"></td>
+            </tr>
+            <tr>
+                <td>Monthly EMI Rs.</td>
+                <td id ="EMI"></td>
+                <td id ="EMIFixed"></td>
+            </tr>
+
+        </table>
+	</div>
+
+
+	<script src="app.js"></script>
+</body>
+
+
+</html>
